@@ -37,32 +37,15 @@ Or install the CLI:
 - Or clone and build: `go build -o edekompile ./cmd`
 - Verify: `edekompile --help`
 
-Example: Fetch current offers for a market (no account required):
+Example: Fetch current offers for a market (no authentication required):
 
 ```
 $ edekompile offers -market 4314021182307
 Offers: 324
 [...]
---------------------------------------
-Unsere Heimat – echt & gut Bioland-Kartoffeln
-  aus Süddeutschland, mehlig-kochend, vorwiegend festkochend oder festkochend, Sorte siehe Etikett, 1,5 kg, (1 kg = 1,33)
-  Price: 1.99€
---------------------------------------
-Kohlrabi
-  aus Italien, Klasse I, Stück
-  Price: 0.69€
---------------------------------------
-Kohlrabi 2 Stück
-  aus Italien, Klasse I, 2 Stück; • Neuer Einzelpreis: 0.50; • Nicht mit anderen Aktionen oder Bar-Rabatt-Coupons kombinierbar.
-  Price: 1€
---------------------------------------
 Kiwis Gold
   aus Italien, Klasse I, Stück
   Price: 0.79€
---------------------------------------
-Cocktail Rispentomaten
-  aus Deutschland, Klasse I, 300 g, (1 kg = 9,97)
-  Price: 2.99€
 --------------------------------------
 Gurken
   aus Spanien oder den Niederlanden, Klasse I, Stück
@@ -71,8 +54,12 @@ Gurken
 Trauben Mix
   hell und rot, kernlos, aus Südafrika oder Indien, Klasse I, 500 g, (1 kg = 3,98)
   Price: 1.99€
-...
+[...]
 ```
+
+Receipts and market-search require authentication. You have two options:
+1) Use [edekompile-auth-helper](https://github.com/ByteSizedMarius/edekompile-auth-helper) to generate the authentication file and copy it to the cli working directory, or 
+2) Login at [login.edeka/app](https://login.edeka/app), copy the bearer from the browser devtools and then use the `login` command from the edekompile cli
 
 ## intro
 
